@@ -7,7 +7,7 @@ namespace BlazorShop.Server.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private static List<Product> Products = new List<Product>
+        private static List<Product> Products = new List<Product>()
         {
         new Product
         {
