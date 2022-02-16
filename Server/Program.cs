@@ -1,5 +1,6 @@
 global using BlazorShop.Shared;
 using BlazorShop.Server.Data;
+using BlazorShop.Server.Services.ProductService;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<IProductService, ProductService>();
 var app = builder.Build();
 
 app.UseSwaggerUI();
